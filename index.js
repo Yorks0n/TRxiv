@@ -25,7 +25,7 @@ function getBioRxivData(filteredData) {
     var result = [];
     var promises = [];
     var delay = 0;
-    for (let i = 0; i < urls.length; i++) { //暂时将循环次数urls.length改为2，只取前两条作为测试
+    for (let i = 0; i < urls.length; i++) { 
         //console.log("Fetching " + urls[i]);
         var promise = new Promise((resolve, reject) => {
             setTimeout(() => {
@@ -90,7 +90,7 @@ async function main(){
         accumulator[current.doi] = accumulator[current.doi] || current;
         return accumulator;
       }, {}));
-    //console.log(uniqueData.length);
+    console.log("Find " + uniqueData.length + " Altmetric datas.");
 
     // Use history.1d, 3d, 1w, 1m of uniqueData  to X1d, X3d, X1w, X1m
     // Only reserve title, doi, altmetric_jid, score and X1d, X3d, X1w, X1m
