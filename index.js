@@ -1,5 +1,6 @@
 const json2csv = require('json2csv').parse;
 const fs = require('fs');
+const fetch = require('node-fetch');
 
 function getAltUrls(timeframe = ['1d'], pageList = [1]){
     let urls = [];
