@@ -1,6 +1,5 @@
 ## main.yml
 name: 'TRxiv update'
-description: 'Retrive Altmetric trending preprints'
 
 # 触发条件
 ## 条件1，代码push进仓库
