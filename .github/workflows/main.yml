@@ -29,7 +29,7 @@ jobs:
          git add data.csv
          git commit -m "update data.csv"
         shell: bash
-      
+      ## 使用秘钥确认具有上传权限，同时避免loop
       - name: Push changes
         uses:  ad-m/github-push-action@master
         with:

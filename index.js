@@ -12,7 +12,7 @@ function getAltUrls(timeframe = ['1d'], pageList = [1]){
     )});
     return urls;
 }
-
+ 
 /* 
 Use filteredData as input, use bioRxiv API to retrive detailed info according to altmetric_jid and doi
 */
