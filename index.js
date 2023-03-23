@@ -48,8 +48,7 @@ function getBioRxivData(filteredData) {
 
 
 function getAltData() {
-    //var urls = getAltUrls(timeframe = ['1d','3d','1w','1m'], pageList = [1, 2]);
-    var urls = getAltUrls(timeframe = ['1m'], pageList = [1]);
+    var urls = getAltUrls(timeframe = ['1d','3d','1w','1m'], pageList = [1, 2]);
     var result = [];
     var promises = [];
     var delay = 0;
