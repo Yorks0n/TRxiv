@@ -18,8 +18,8 @@ jobs:
         uses: Yorks0n/TRxiv@main
       - name: Commit files
         run: |
-         git config --local user.email "569009818@qq.com"
-         git config --local user.name "Yorks0n"
+         git config --global user.email "569009818@qq.com"
+         git config --global user.name "Yorks0n"
          git pull
          git add README.md
          git add data.csv
