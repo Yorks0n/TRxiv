@@ -18,7 +18,7 @@ jobs:
         uses: Yorks0n/TRxiv@main
       - name: Commit files
         run: |
-         git config --local user.email ${{ secrets.MY_EMAIL }}
+         git config --local user.email "569009818@qq.com"
          git config --local user.name "Yorks0n"
          git pull
          git add README.md
