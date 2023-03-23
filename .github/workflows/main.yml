@@ -1,0 +1,15 @@
+## main.yml
+name: 'TRxiv update'
+
+# 触发条件
+## 条件1，代码push进仓库
+## 条件2，定时任务，在UTC 10和22点，即北京时间18点和6点运行
+on:
+  push:
+  schedule:
+    - cron: '0 10,22 * * *'
+
+# 运行流程
+runs:
+    using: 'node16'
+    main:'dist/index.js'
