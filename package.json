@@ -1,0 +1,12 @@
+{
+  "name": "trxiv",
+  "version": "1.0.0",
+  "description": "Tracking popular bioRxiv and medRxiv preprints",
+  "main": "altmetric_trending_preprint.js",
+  "scripts": {
+    "updateData": "node altmetric_trending_preprint.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
