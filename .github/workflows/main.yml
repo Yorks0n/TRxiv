@@ -14,10 +14,9 @@ jobs:
     runs-on: ubuntu-latest
     name: Update the csv file
     steps:
-      - name: Install node
-        uses: actions/setup-node@v2
-        with:
-          node-version: '18'
-
       - name: 'run script'
         run: npm install && npm run updateData
+
+runs: 
+  using: 'node16'
+  main: 'altmetric_trending_preprint.js'
