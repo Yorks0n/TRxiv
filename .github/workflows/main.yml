@@ -14,17 +14,22 @@ jobs:
     runs-on: ubuntu-latest
     name: Update the csv file
     steps: 
+      ## 必须有这一步，让运行的文件夹成为一个git repo
+      - uses: actions/checkout@v3
+
       - name: 'run script'
         uses: Yorks0n/TRxiv@main
+
       - name: Commit files
         run: |
-         git config --global user.email "569009818@qq.com"
-         git config --global user.name "Yorks0n"
+         git config --local user.email "569009818@qq.com"
+         git config --local user.name "Yorks0n"
          git pull
          git add README.md
          git add data.csv
          git commit -m "update data.csv"
         shell: bash
+      
       - name: Push changes
         uses:  ad-m/github-push-action@master
         with:
