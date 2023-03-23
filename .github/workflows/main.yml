@@ -13,21 +13,7 @@ jobs:
   TRxiv_update_job:
     runs-on: ubuntu-latest
     name: Update the csv file
-    steps:
+    steps: 
       - name: 'run script'
         uses: Yorks0n/TRxiv@main
 
-      - name: Commit files
-      run: |
-         git config --local user.email ${{ secrets.MY_EMAIL }}
-         git config --local user.name "Yorks0n"
-         git pull
-         git add README.md
-         git add data.csv
-         git commit -m "update data.csv"
-
-      - name: Push changes
-      uses:  ad-m/github-push-action@master
-      with:
-         github_token: ${{ secrets.MY_GIT_TOKEN }}
-         branch: main
