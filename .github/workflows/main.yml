@@ -13,3 +13,19 @@ on:
 runs:
     using: 'node16'
     main: 'dist/index.js'
+
+jobs:
+  TRxiv_update_job:
+    runs-on: ubuntu-latest
+    name: Update the csv file
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
+
+      - name: Install node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'
+
+      - name: run script
+        run: node dist/index.js
