@@ -1,22 +1,15 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+on: [push]
 
-# 触发条件
-## 条件1，代码push进仓库
-## 条件2，定时任务，在UTC 10和22点，即北京时间18点和6点运行
-on:
-  push:
-  schedule:
-    - cron: '0 10,22 * * *'
-    
-inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
-    required: true
-    default: 'World'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
-runs:
-  using: 'node16'
-  main: 'index.js'
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to say hello
+    steps:
+      - name: Hello world action step
+        id: hello
+        uses: octocat/hello-world-javascript-action@v1.1
+        with:
+          who-to-greet: 'Mona the Octocat'
+      # Use the output from the `hello` step
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
