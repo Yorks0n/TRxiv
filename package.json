@@ -2,9 +2,9 @@
   "name": "trxiv",
   "version": "1.0.0",
   "description": "Tracking popular bioRxiv and medRxiv preprints",
-  "main": "altmetric_trending_preprint.js",
+  "main": "index.js",
   "scripts": {
-    "updateData": "node altmetric_trending_preprint.js"
+    "updateData": "node index.js"
   },
   "keywords": [],
   "author": "Yorks0n",
