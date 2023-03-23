@@ -12,4 +12,4 @@ on:
 # 运行流程
 runs:
     using: 'node16'
-    main:'dist/index.js'
+    main: 'dist/index.js'
