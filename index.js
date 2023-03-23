@@ -1,6 +1,6 @@
 const json2csv = require('json2csv').parse;
 const fs = require('fs');
-const fetch = require('node-fetch');
+const axios = require('axios');
 
 function getAltUrls(timeframe = ['1d'], pageList = [1]){
     let urls = [];
@@ -29,10 +29,9 @@ function getBioRxivData(filteredData) {
         //console.log("Fetching " + urls[i]);
         var promise = new Promise((resolve, reject) => {
             setTimeout(() => {
-              fetch(urls[i])
-                .then(response => response.json())
-                .then(results => {
-                  result.push(...results.collection);
+              axios.get(urls[i])
+                .then(response => {
+                  result.push(...response.data.collection);
                   resolve();
                 })
                 .catch(error => reject(error))
@@ -57,10 +56,9 @@ function getAltData() {
     for (let i = 0; i < urls.length; i++) {
         var promise = new Promise((resolve, reject) => {
           setTimeout(() => {
-            fetch(urls[i])
-              .then(response => response.json())
-              .then(results => {
-                result.push(...results.results);
+            axios.get(urls[i])
+              .then(response => {
+                result.push(...response.data.results);
                 resolve();
               })
               .catch(error => reject(error))
