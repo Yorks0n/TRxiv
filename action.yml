@@ -1,0 +1,6 @@
+name: 'trxiv'
+description: 'Tracking popular bioRxiv and medRxiv preprints'
+
+runs:
+  using: 'node16'
+  main: 'dist/index.js'

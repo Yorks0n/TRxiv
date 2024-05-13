@@ -1,0 +1,17 @@
+{
+  "name": "trxiv",
+  "version": "1.0.0",
+  "description": "Tracking popular bioRxiv and medRxiv preprints",
+  "main": "index.js",
+  "scripts": {
+    "updateData": "node index.js"
+  },
+  "keywords": [],
+  "author": "Yorks0n",
+  "license": "ISC",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1",
+    "json2csv": "^6.0.0-alpha.2"
+  }
+}
