@@ -48,7 +48,8 @@ function getBioRxivData(filteredData) {
 
 
 function getAltData() {
-    var urls = getAltUrls(timeframe = ['1d','3d','1w','1m'], pageList = [1,2,3,4,5]);
+    var urls = getAltUrls(timeframe = ['1d','3d','1w','1m'], pageList = [1]);
+    //var urls = getAltUrls(timeframe = ['1d','3d','1w','1m'], pageList = [1,2,3,4,5]);
     var result = [];
     var promises = [];
     var delay = 0;
@@ -62,7 +63,7 @@ function getAltData() {
               })
               .catch(error => reject(error))
           }, delay);
-          delay += 500; // 设置1秒的时间间隔
+          delay += 1000; // 设置1秒的时间间隔
         });
         promises.push(promise);
       }
