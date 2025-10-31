@@ -6,8 +6,8 @@ name: 'TRxiv update'
 ## 条件2，定时任务，在UTC 10和22点，即北京时间18点和6点运行
 on:
   push:
-  schedule:
-    - cron: '0 22 * * *'
+#  schedule:
+#    - cron: '0 22 * * *'
 
 jobs:
   TRxiv_update_job:
